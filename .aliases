@@ -1,0 +1,34 @@
+# Linux
+alias ll='ls -alF --group-directories-first'
+alias lld='ll -d'
+alias rm='rm -i'
+alias cp='cp -i'
+alias mv='mv -i'
+alias shh='echo "No, YOU be quiet!" #'
+
+# Python virtualenv
+alias pyve='source env/bin/activate'
+
+# Git
+alias gitap='git add -p'
+alias gitchd='git checkout develop'
+alias gitchm='git checkout master'
+alias gitco='git commit'
+alias gitcom='gitco -m "mblakesley was here"'
+alias gitd='git diff'
+alias gitdc='git diff --cached'
+alias gitfp='git fetch -p'
+alias gitl='git log'
+alias gitlo='git log --oneline --graph'
+alias gitpu='git push'
+alias gitpuf='git push -f'
+alias gitred='git rebase -i develop'
+alias gitrem='git rebase -i master'
+alias gitrea='git rebase --abort'
+alias gitrec='git rebase --continue'
+
+# Git Combos
+alias gits='git branch -a; git status'
+alias gitupd='gitchd; gitfp; git pull'
+alias gitupm='gitchm; gitfp; git pull'
+
