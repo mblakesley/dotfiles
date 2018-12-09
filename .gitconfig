@@ -1,7 +1,0 @@
-[core]
-	editor = vim
-[push]
-	default = simple
-[user]
-	name = Michael Blakesley
-
