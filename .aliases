@@ -1,3 +1,9 @@
+# shell colors
+alias ls='ls --color'
+alias grep='grep --color'
+alias fgrep='fgrep --color'
+alias egrep='egrep --color'
+
 # shell
 alias ll='ls -alF --group-directories-first'
 alias lld='ll -d'
