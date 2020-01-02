@@ -1,5 +1,7 @@
 [core]
 	editor = vim
-	pager = "less -F -X"
+	pager = "less -FX"
+[fetch]
+	prune = true
 [push]
 	default = simple
