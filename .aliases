@@ -1,10 +1,10 @@
-# shell colors
+# Shell colors
 alias ls='ls --color'
 alias grep='grep --color'
 alias fgrep='fgrep --color'
 alias egrep='egrep --color'
 
-# shell
+# Shell
 alias ll='ls -alF --group-directories-first'
 alias lld='ll -d'
 alias rm='rm -iv'
@@ -13,10 +13,10 @@ alias mv='mv -iv'
 alias mkdir='mkdir -pv'
 alias shh='echo "No, YOU be quiet!" #'
 
-# python virtualenv
+# Python virtualenv
 alias pve='source venv/bin/activate'
 
-# git
+# Git
 alias ga='git add'
 alias gap='ga -p'
 alias gb='git branch'
@@ -27,10 +27,6 @@ alias gch='git checkout'
 alias gchb='gch -b'
 alias gchm='gch master'
 alias gchmu='gchm; gpl'
-alias gchmub='gchmu; gch -'
-alias gchp='gch production'
-alias gchpu='gchp; gpl'
-alias gchpub='gchpu; gch -'
 alias gco='git commit'
 alias gcoa='gco --amend'
 alias gcom='gco -m'
@@ -55,9 +51,8 @@ alias greb='git rebase'
 alias greba='greb --abort'
 alias grebc='greb --continue'
 alias grebi='greb -i'
-alias grebd='grebi develop'
 alias grebm='grebi master'
-alias grebp='grebi production'
+alias grebmu='gchmu; gch -; grebm'
 alias grebh='grebh1'
 alias grebh1='grebi HEAD~1'
 alias grebh2='grebi HEAD~2'
