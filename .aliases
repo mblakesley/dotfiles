@@ -13,10 +13,12 @@ alias cp='cp -iv'
 alias mv='mv -iv'
 alias mkdir='mkdir -pv'
 alias cats='head -n -0'
+alias v='vim'
 alias shh='echo "No, YOU be quiet!" #'
 
 # Edit common files
-alias valias='vim ~/.aliases'
+alias valias='v ~/.aliases'
+alias vzsh='v ~/.zshrc'
 
 # Python virtualenv
 alias pve='source .venv/bin/activate'
@@ -34,6 +36,8 @@ alias gch='git checkout'
 alias gchb='gch -b'
 alias gchm='gch master'
 alias gchmu='gchm; gpl'
+alias gcl='git clean'
+alias gcli='gcl -i'
 alias gco='git commit'
 alias gcoa='gco --amend'
 alias gcom='gco -m'
