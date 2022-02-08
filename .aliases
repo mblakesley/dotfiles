@@ -26,6 +26,13 @@ alias valias='vim ~/.aliases'
 alias vzsh='vim ~/.zshrc'
 alias vssh='vim ~/.ssh/config'
 
+# listing & grepping
+alias agi='alias | gi'
+alias ali='apt list -i'
+alias aligi='ali | gi'
+alias egi='env | gi'
+alias gi='grep -i'
+
 # Python virtualenv
 alias pmvv='python3 -m venv .venv'
 alias svba='source .venv/bin/activate'
