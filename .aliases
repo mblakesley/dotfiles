@@ -16,10 +16,8 @@ alias mv='mv -iv'
 alias mkdir='mkdir -pv'
 alias cats='head -n -0'
 alias shh='echo "No, YOU be quiet!" #'
-if [[ $0 != 'bash' ]]; then
-	alias -g ...='../..'
-	alias -g ....='../../..'
-fi
+alias ...='../..'
+alias ....='../../..'
 
 # Edit common files
 alias valias='vim ~/.aliases'
@@ -27,11 +25,12 @@ alias vzsh='vim ~/.zshrc'
 alias vssh='vim ~/.ssh/config'
 
 # listing & grepping
+alias gi='grep -i'
 alias agi='alias | gi'
 alias ali='apt list -i'
 alias aligi='ali | gi'
 alias egi='env | gi'
-alias gi='grep -i'
+alias psefgi='ps -ef | gi'
 
 # Python virtualenv
 alias pmvv='python3 -m venv .venv'
@@ -46,6 +45,8 @@ alias gbd='gb -d'
 alias gbdd='gb -D'
 alias gbm='gb -m'
 alias gcf='git config'
+alias gcfgun='gcf --global user.name'
+alias gcfgue='gcf --global user.email'
 alias gcfl='gcf -l --show-scope'
 alias gch='git checkout'
 alias gcl='git clean'

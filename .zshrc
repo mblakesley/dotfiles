@@ -48,10 +48,13 @@ source ~/.aliases
 
 ### EXTRAS ADDED FOR CLI TOOLS
 # FZF
-source /usr/share/doc/fzf/examples/key-bindings.zsh
-source /usr/share/doc/fzf/examples/completion.zsh
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # misc autocompletion
 complete -C aws_completer aws
 complete -o nospace -C /usr/local/bin/terraform terraform
 
+# pyenv, FFS
+export PATH="$HOME/.pyenv/bin:$PATH"
+eval "$(pyenv init --path)"
+eval "$(pyenv virtualenv-init -)"
