@@ -19,10 +19,11 @@ alias shh='echo "No, YOU be quiet!" #'
 alias ...='../..'
 alias ....='../../..'
 
-# Edit common files
+# Local nav & edit
 alias valias='vim ~/.aliases'
 alias vzsh='vim ~/.zshrc'
 alias vssh='vim ~/.ssh/config'
+alias dotfiles='~/code/dotfiles'
 
 # listing & grepping
 alias gi='grep -i'

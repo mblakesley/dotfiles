@@ -14,8 +14,9 @@ SAVEHIST=1000
 ### End of lines configured by zsh-newuser-install
 ### The following lines were added by compinstall
 # Use modern completion system
-autoload -Uz compinit
+autoload -Uz compinit bashcompinit
 compinit
+bashcompinit
 
 zstyle ':completion:*' auto-description 'specify: %d'
 zstyle ':completion:*' completer _expand _complete _correct _approximate
@@ -49,10 +50,6 @@ source ~/.aliases
 ### EXTRAS ADDED FOR CLI TOOLS
 # FZF
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
-# misc autocompletion
-complete -C aws_completer aws
-complete -o nospace -C /usr/local/bin/terraform terraform
 
 # pyenv, FFS
 export PATH="$HOME/.pyenv/bin:$PATH"
