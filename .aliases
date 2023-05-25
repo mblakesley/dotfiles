@@ -9,6 +9,7 @@ alias diff='diff --color'
 alias ll='ls -lF --group-directories-first'
 alias lla='ll -a'
 alias lld='ll -d'
+alias llh='ll -h'
 alias lll='ll -L'
 alias rm='rm -iv'
 alias cp='cp -iv'
@@ -19,23 +20,26 @@ alias shh='echo "No, YOU be quiet!" #'
 alias ...='../..'
 alias ....='../../..'
 
-# Local nav & edit
+# Edit common files
 alias valias='vim ~/.aliases'
 alias vzsh='vim ~/.zshrc'
 alias vssh='vim ~/.ssh/config'
-alias dotfiles='~/code/dotfiles'
 
-# listing & grepping
+# Navigate to common dirs
+alias dotfiles='~/code/dotfiles'
+alias -g danki='~/Downloads/anki'
+
+# Listing & grepping
 alias gi='grep -i'
 alias agi='alias | gi'
-alias ali='apt list -i'
-alias aligi='ali | gi'
+alias aligi='apt list -i | gi'
 alias egi='env | gi'
 alias psefgi='ps -ef | gi'
 
 # Python virtualenv
 alias pmvv='python3 -m venv .venv'
 alias svba='source .venv/bin/activate'
+alias pirr='pip install -r requirements.txt'
 
 # Git
 alias ga='git add'

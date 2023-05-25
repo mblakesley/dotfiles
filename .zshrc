@@ -37,12 +37,11 @@ zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#)*=0=01;31'
 zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
 ### End of lines added by compinstall
 
-source ~/antigen.zsh
-antigen theme romkatv/powerlevel10k
-antigen apply
-
+# PL10K
+source ~/.powerlevel10k/powerlevel10k.zsh-theme
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ -f ~/.p10k.zsh ]] && source ~/.p10k.zsh
+
 
 source ~/.aliases
 
@@ -51,7 +50,8 @@ source ~/.aliases
 # FZF
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-# pyenv, FFS
+# pyenv
 export PATH="$HOME/.pyenv/bin:$PATH"
 eval "$(pyenv init --path)"
 eval "$(pyenv virtualenv-init -)"
+
