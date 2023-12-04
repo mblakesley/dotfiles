@@ -1,10 +1,10 @@
 ### Lines configured by zsh-newuser-install
 # Set up the prompt
-# TODO: what the eff do these settings do?
-setopt appendhistory histignorealldups sharehistory extendedglob globdots nomatch notify
-setopt interactivecomments  # treat "#" as a comment metachar in interactive shells
-setopt autocd  # interpret "$ <dir>" as "$ cd <dir>"
+setopt appendhistory histignorealldups sharehistory extendedglob nomatch notify
 setopt noclobber  # prevent ">" operator from overwriting existing file
+setopt interactivecomments  # treat # as a comment metachar in interactive shells
+setopt globdots  # make * include hidden files
+setopt autocd  # interpret "$ <dir>" as "$ cd <dir>"
 
 # keybindings (? forgot the deets)
 bindkey "^[[1;5C" forward-word
