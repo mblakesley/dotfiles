@@ -41,19 +41,22 @@ source ~/.config/powerlevel10k/powerlevel10k.zsh-theme
 # To customize prompt, run `p10k configure` or edit ~/.config/pl10k.zsh.
 [[ ! -f ~/.config/pl10k.zsh ]] || source ~/.config/pl10k.zsh
 
-export CLICOLOR=1  # MacOS: BSD needs this for color
+export CLICOLOR=1  # BSD needs this for color
 
 
 source ~/.config/aliases
 
 
 ### EXTRAS ADDED FOR CLI TOOLS
-# Homebrew (MacOS)
+# Homebrew
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
 # FZF
-[ -f ~/.config/fzf/init.zsh ] && source ~/.config/fzf/init.zsh
+source <(fzf --zsh)
 
-# ASDF
+# AWS CLI
+complete -C aws_completer aws
+
+# ASDF (via Homebrew)
 . /opt/homebrew/opt/asdf/libexec/asdf.sh
 

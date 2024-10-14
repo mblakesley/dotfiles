@@ -1,12 +1,7 @@
-# Shell colors
-alias ls='ls --color'
-alias grep='grep --color'
-alias fgrep='fgrep --color'
-alias egrep='egrep --color'
-alias diff='diff --color'
-
 # Shell
-alias ll='ls -lF --group-directories-first'
+# Here and elsewhere in this file, we swap out the BSD cmd for the GNU version using the coreutils pkg.
+# We do so here to gain access to the "group dirs first" option.
+alias ll='gls -lF --group-directories-first --color'
 alias lla='ll -a'
 alias lld='ll -d'
 alias llh='ll -h'
@@ -15,27 +10,29 @@ alias rm='rm -iv'
 alias cp='cp -iv'
 alias mv='mv -iv'
 alias mkdir='mkdir -pv'
-alias cats='head -n -0'
+alias cats='ghead -n -0'  # Use GNU for sensible option args
 alias shh='echo "No, YOU be quiet!" #'
 alias ...='../..'
 alias ....='../../..'
+alias .....='../../../..'
 alias vim='nvim'
 
 # Edit common files
-alias valias='vim ~/.aliases'
+alias valias='vim ~/.config/aliases'
 alias vzsh='vim ~/.zshrc'
 alias vssh='vim ~/.ssh/config'
-alias vaws='vim ~/.aws/config'
+alias vaws-conf='vim ~/.aws/config'
+alias vaws-creds='vim ~/.aws/credentials'
 
 # Navigate to common dirs
 alias downloads='~/Downloads'
-alias dotfiles='~/code/dotfiles'
-alias -g danki='~/Downloads/anki'
+alias dotfiles='~/Code/dotfiles'
+alias ssh-dir='~/.ssh'
+alias aws-dir='~/.aws'
 
-# Listing & grepping
+# Listing & Grepping
 alias gi='grep -i'
 alias agi='alias | gi'
-alias aligi='apt list -i | gi'
 alias egi='env | gi'
 alias psefgi='ps -ef | gi'
 
@@ -44,6 +41,9 @@ alias pmvv='python3 -m venv .venv'
 alias svba='source .venv/bin/activate'
 alias pirr='pip install -r requirements.txt'
 alias pfr='pip freeze >| requirements.txt'
+
+# AWS CLI
+alias asl='aws sso login'
 
 # Git
 alias ga='git add'
@@ -59,14 +59,12 @@ alias gcfgun='gcf --global user.name'
 alias gcfgue='gcf --global user.email'
 alias gcfl='gcf --list --show-scope'
 alias gch='git checkout'
-alias gcl='git clean'
-alias gcli='gcl -i'
+alias gcl='git clone'
 alias gcp='git cherry-pick'
 alias gco='git commit'
 alias gcoa='gco --amend'
 alias gcom='gco -m'
 alias gcomm='gcom "mblakesley was here"'
-alias gcomma='gcomm --allow-empty'
 alias gd='git diff'
 alias gdc='gd --cached'
 alias gdn='gd --name-status'
@@ -76,10 +74,11 @@ alias gl='git log'
 alias glo='gl --oneline --graph'
 alias gm='git merge'
 alias gma='gm --abort'
+alias gmv='git mv'
 alias gpl='git pull'
 alias gps='git push'
 alias gpsf='gps --force'
-alias gpsu='gps --set-upstream origin HEAD'
+alias gpsuoh='gps --set-upstream origin HEAD'
 alias greb='git rebase'
 alias greba='greb --abort'
 alias grebc='greb --continue'
@@ -115,11 +114,26 @@ if [[ $0 != 'bash' ]]; then
 fi
 
 # Terraform
-# alias tf='terraform'
-# alias tfi='tf init'
-# alias tfv='tf validate'
-# alias tfp='tf plan'
-# alias tfa='tf apply'
+alias tf='terraform'
+alias tfa='tf apply'
+alias tfim='tf import'
+alias tfi='tf init'
+alias tfp='tf plan'
+alias tfsh='tf show'
+alias tfstm='tf state mv'
+alias tfstr='tf state rm'
+alias tfv='tf validate'
+
+# Terragrunt
+alias tg='terragrunt'
+alias tga='tg apply'
+alias tgim='tg import'
+alias tgi='tg init'
+alias tgp='tg plan'
+alias tgsh='tg show'
+alias tgstm='tg state mv'
+alias tgstr='tg state rm'
+alias tgv='tg validate'
 
 # Docker
 # alias da='docker attach'
