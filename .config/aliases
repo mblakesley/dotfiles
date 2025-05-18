@@ -16,6 +16,7 @@ alias ...='../..'
 alias ....='../../..'
 alias .....='../../../..'
 alias vim='nvim'
+alias brupdate='brew update; brew upgrade'
 
 # Edit common files
 alias valias='vim ~/.config/aliases'
@@ -25,10 +26,11 @@ alias vaws-conf='vim ~/.aws/config'
 alias vaws-creds='vim ~/.aws/credentials'
 
 # Navigate to common dirs
-alias downloads='~/Downloads'
 alias dotfiles='~/Code/dotfiles'
-alias ssh-dir='~/.ssh'
-alias aws-dir='~/.aws'
+alias cdssh='~/.ssh'
+alias downloads='~/Downloads'
+alias backups='~/Backups'
+alias cdaws='~/.aws'
 
 # Listing & Grepping
 alias gi='grep -i'
