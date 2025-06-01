@@ -50,13 +50,10 @@ source ~/.config/aliases
 ### EXTRAS ADDED FOR CLI TOOLS
 # Homebrew
 eval "$(/opt/homebrew/bin/brew shellenv)"
-
 # FZF
 source <(fzf --zsh)
-
 # AWS CLI
 complete -C aws_completer aws
-
-# ASDF (via Homebrew)
-. /opt/homebrew/opt/asdf/libexec/asdf.sh
+# ASDF
+export PATH="${ASDF_DATA_DIR:-$HOME/.asdf}/shims:$PATH"
 
