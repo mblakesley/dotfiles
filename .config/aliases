@@ -10,13 +10,13 @@ alias rm='rm -iv'
 alias cp='cp -iv'
 alias mv='mv -iv'
 alias mkdir='mkdir -pv'
-alias cats='ghead -n -0'  # Use GNU for sensible option args
-alias shh='echo "No, YOU be quiet!" #'
 alias ...='../..'
 alias ....='../../..'
 alias .....='../../../..'
 alias vim='nvim'
 alias brupdate='brew update; brew upgrade'
+alias cats='ghead -n -0'  # Use GNU for sensible option args
+alias shh='echo "No, YOU be quiet!" #'
 
 # Edit common files
 alias valias='vim ~/.config/aliases'
@@ -31,8 +31,9 @@ alias cdssh='~/.ssh'
 alias downloads='~/Downloads'
 alias backups='~/Backups'
 alias cdaws='~/.aws'
+alias leetcode='~/Code/leetcode'
 
-# Listing & Grepping
+# Grepping
 alias gi='grep -i'
 alias agi='alias | gi'
 alias egi='env | gi'
