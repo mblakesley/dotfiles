@@ -1,11 +1,9 @@
 # Shell
 # Here and elsewhere in this file, we swap out the BSD cmd for the GNU version using the coreutils pkg.
 # We do so here to gain access to the "group dirs first" option.
-alias ll='gls -lF --group-directories-first --color'
+alias ll='eza -lF --group-directories-first'
 alias lla='ll -a'
 alias lld='ll -d'
-alias llh='ll -h'
-alias lll='ll -L'
 alias rm='rm -iv'
 alias cp='cp -iv'
 alias mv='mv -iv'
@@ -13,6 +11,8 @@ alias mkdir='mkdir -pv'
 alias ...='../..'
 alias ....='../../..'
 alias .....='../../../..'
+alias grep='grep --color'
+alias diff='diff --color'
 alias vim='nvim'
 alias brupdate='brew update; brew upgrade'
 alias cats='ghead -n -0'  # Use GNU for sensible option args
@@ -27,10 +27,10 @@ alias vaws-creds='vim ~/.aws/credentials'
 
 # Navigate to common dirs
 alias dotfiles='~/Code/dotfiles'
-alias cdssh='~/.ssh'
 alias downloads='~/Downloads'
 alias backups='~/Backups'
-alias cdaws='~/.aws'
+alias dssh='~/.ssh'
+alias daws='~/.aws'
 alias leetcode='~/Code/leetcode'
 
 # Grepping
@@ -121,19 +121,7 @@ if [[ $0 != 'bash' ]]; then
 fi
 
 # HTTPie
-alias httpm='http --print=hbm'  # this is what -m should actually do
-
-# Terraform
-alias tf='terraform'
-alias tfa='tf apply'
-alias tfim='tf import'
-alias tfi='tf init'
-alias tfp='tf plan'
-alias tfsh='tf show'
-alias tfstm='tf state mv'
-alias tfstr='tf state rm'
-alias tfstsh='tf state show'
-alias tfv='tf validate'
+alias httpm='http --print=hbm'  # This is what -m should actually do, IMO
 
 # Terragrunt
 alias tg='terragrunt'
@@ -146,6 +134,18 @@ alias tgstmv='tg state mv'
 alias tgstrm='tg state rm'
 alias tgstsh='tg state show'
 alias tgv='tg validate'
+
+# Terraform
+alias tf='terraform'
+alias tfa='tf apply'
+alias tfim='tf import'
+alias tfi='tf init'
+alias tfp='tf plan'
+alias tfsh='tf show'
+alias tfstm='tf state mv'
+alias tfstr='tf state rm'
+alias tfstsh='tf state show'
+alias tfv='tf validate'
 
 # Docker
 # alias da='docker attach'

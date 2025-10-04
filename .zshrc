@@ -36,12 +36,14 @@ compinit
 bashcompinit
 ### End of lines added by compinstall
 
+# Fix iTerm2 keybindings
+# Fix Cmd + <-/-> via settings: Profiles > Defaults > Keys > Keybindings > Presets
+bindkey \^U backward-kill-line  # Fix Ctrl-U
+
 # PL10K
 source ~/.config/powerlevel10k/powerlevel10k.zsh-theme
 # To customize prompt, run `p10k configure` or edit ~/.config/pl10k.zsh.
 [[ ! -f ~/.config/pl10k.zsh ]] || source ~/.config/pl10k.zsh
-
-export CLICOLOR=1  # BSD needs this for color
 
 
 source ~/.config/aliases
